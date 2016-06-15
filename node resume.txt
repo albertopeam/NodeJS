@@ -1,0 +1,58 @@
+Concepts:
+  First class function:
+    - in js is possible to pass functions as parameters.
+  Closures:
+    - a closure is a funcion another function.
+    - the inner function can access to the context of the outer function.
+      - peg: it can access the vars of the outer function
+
+Node module:
+  - its a file
+  - to export functions(similar that objects)
+  - peg:
+
+    - file: rectangle.js
+      exports.perimeter = function (x, y) {
+            return (2*(x+y));
+            }
+
+    - to use:
+      var rectangle = require('./rect');
+
+  - core modules:
+    - system
+    - path
+    - util
+    ....
+
+  - external modules:
+    - third party
+    - installed using npm, installed on node_modules
+    - node_modules folder inside app
+
+  - To import:
+    - use require function
+    - core modules and external modules:
+      - up in the hierarchy until the module is founds
+      - peg:
+        require('module_name');
+    - file based modules:
+      - peg:
+        require('./route_to_file_from_main_folder');
+
+  - Init node project:
+    - cmd: node init
+      - it creates package.json
+
+  - Package.json
+    - includes info about the module or app
+    - includes info about dependencies
+    - when added a module, it will be reflected in package.json
+    - it will be in main folder.
+
+  - Install modules:
+    - npn install params
+    - 3 options: minor, exact and patch
+    - review this options in more detail
+    - peg: exact version
+      npn install express@4.0.0
